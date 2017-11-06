@@ -95,54 +95,6 @@ moment('2015-02-28T20:00:00Z').lastWorkingTime();
 // Fri Feb 27 2015 17:00:00 GMT+0000
 ```
 
-### `moment#addWorkingTime`
-
-Returns: `self`
-
-Adds an amount of working time to a moment, modifying the original moment instance.
-
-#### Example:
-```javascript
-moment('2015-02-27T10:00:00Z').addWorkingTime(5, 'hours');
-// Fri Feb 27 2015 15:00:00 GMT+0000
-moment('2015-02-28T10:00:00Z').addWorkingTime(5, 'hours');
-// Mon Mar 02 2015 14:00:00 GMT+0000
-moment('2015-02-27T10:00:00Z').addWorkingTime(5, 'hours', 30, 'minutes');
-// Fri Feb 27 2015 15:30:00 GMT+0000
-
-```
-
-### `moment#subtractWorkingTime`
-
-Returns: `self`
-
-Adds an amount of working time to a moment, modifying the original moment instance.
-
-#### Example:
-```javascript
-moment('2015-02-27T16:00:00Z').subtractWorkingTime(5, 'hours');
-// Fri Feb 27 2015 11:00:00 GMT+0000
-moment('2015-02-28T16:00:00Z').subtractWorkingTime(5, 'hours');
-// Fri Feb 27 2015 12:00:00 GMT+0000
-moment('2015-02-27T16:00:00Z').subtractWorkingTime(5, 'hours', 30, 'minutes');
-// Fri Feb 27 2015 10:30:00 GMT+0000
-
-```
-
-### `moment#workingDiff`
-
-Returns: `Number`
-
-Calculates the difference between two moments, counting only working time. Arguments are as per [moment#diff](http://momentjs.com/docs/#/displaying/difference/)
-
-#### Example:
-```javascript
-moment('2015-02-27T16:30:00Z').workingDiff(moment('2015-02-26T12:00:00Z'), 'hours');
-// 12
-moment('2015-02-27T16:30:00Z').workingDiff(moment('2015-02-26T12:00:00Z'), 'hours', true);
-// 12.5
-```
-
 ## Configuration
 
 ### Working hours
@@ -156,7 +108,7 @@ Example:
 moment.locale('en', {
     workinghours: {
         0: null,
-        1: ['09:30:00', '17:00:00'],
+        1: [['09:30:00', '17:00:00'], ['19:00:00', '21:00:00']],  // multiple range for a single day
         2: ['09:30:00', '17:00:00'],
         3: ['09:30:00', '13:00:00'],
         4: ['09:30:00', '17:00:00'],
