@@ -1,5 +1,5 @@
 {
-  "name": "moment-business-time",
+  "name": "@npmsoluto/moment-business-time",
   "version": "0.7.1",
   "description": "Query and manipulate moment objects within the context of business/working hours",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lennym/moment-business-time.git"
+    "url": "https://github.com/soluto/moment-business-time.git"
   },
   "author": "Leonard Martin<hello@lennym.co.uk>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lennym/moment-business-time/issues"
+    "url": "https://github.com/soluto/moment-business-time/issues"
   },
-  "homepage": "https://github.com/lennym/moment-business-time",
+  "homepage": "https://github.com/soluto/moment-business-time",
   "keywords": [
     "moment",
     "working time",
