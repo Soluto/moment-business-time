@@ -5,7 +5,18 @@ declare module '@npmsoluto/moment-business-time' {
             holidays?: string[];
             workinghours?: {
                 [key: number]: string[];
-        };
+            };
+        }
+
+        interface WorkingHoursConfig {
+            tz: string;
+            sun: string[] | null;
+            mon: string[] | null;
+            tue: string[] | null;
+            wed: string[] | null;
+            thu: string[] | null;
+            fri: string[] | null;
+            sat: string[] | null;
         }
 
         module 'moment' {
@@ -21,6 +32,7 @@ declare module '@npmsoluto/moment-business-time' {
                 lastWorkingTime(): Moment;
                 nextWorkingTime(): Moment;
                 workingDiff(comparator: Moment, unit: string, detail: boolean): number;
+                isWorkingByConfig(config: WorkingHoursConfig): boolean;
             }
         }
     export = base_moment;
