@@ -199,8 +199,12 @@ describe('moment.business-hours', function () {
     // We are mocking a Chicago Sunday morning at 6:38 AM
     MockDate.set(new Date('2019-11-03T14:38:52.425'));
 
+    it('should return true for empty config', function () {
+        moment().isWorkingByConfig({}).should.be.true;
+    });
+
     it('should be working now', function () {
-      moment().isWorkingByConfig(openOnSundayMorning).should.be.true;
+        moment().isWorkingByConfig(openOnSundayMorning).should.be.true;
     });
 
     it('should not be working now', function () {
