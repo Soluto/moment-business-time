@@ -8,17 +8,6 @@ declare module '@npmsoluto/moment-business-time' {
             };
         }
 
-        export interface WorkingHoursConfig {
-            tz: string;
-            sun: string[] | null;
-            mon: string[] | null;
-            tue: string[] | null;
-            wed: string[] | null;
-            thu: string[] | null;
-            fri: string[] | null;
-            sat: string[] | null;
-        }
-
         module 'moment' {
             interface Moment {
                 addWorkingTime(num: number, unit: string): Moment;
@@ -33,6 +22,17 @@ declare module '@npmsoluto/moment-business-time' {
                 nextWorkingTime(): Moment;
                 workingDiff(comparator: Moment, unit: string, detail: boolean): number;
                 isWorkingByConfig(config: WorkingHoursConfig): boolean;
+            }
+
+            interface WorkingHoursConfig {
+              tz: string;
+              sun: string[] | null;
+              mon: string[] | null;
+              tue: string[] | null;
+              wed: string[] | null;
+              thu: string[] | null;
+              fri: string[] | null;
+              sat: string[] | null;
             }
         }
     export = base_moment;
