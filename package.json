@@ -1,6 +1,6 @@
 {
   "name": "@npmsoluto/moment-business-time",
-  "version": "0.7.2",
+  "version": "0.8.1",
   "description": "Query and manipulate moment objects within the context of business/working hours",
   "typings": "./index.d.ts",
   "main": "index.js",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "chai": "^2.1.0",
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "mockdate": "^2.0.5"
   }
 }
