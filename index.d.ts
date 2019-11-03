@@ -8,7 +8,7 @@ declare module '@npmsoluto/moment-business-time' {
             };
         }
 
-        interface WorkingHoursConfig {
+        export interface WorkingHoursConfig {
             tz: string;
             sun: string[] | null;
             mon: string[] | null;
