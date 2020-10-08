@@ -22,6 +22,7 @@ declare module '@npmsoluto/moment-business-time' {
                 nextWorkingTime(): Moment;
                 workingDiff(comparator: Moment, unit: string, detail: boolean): number;
                 isWorkingByConfig(config: WorkingHoursConfig): boolean;
+                isEventDowntimeByConfig(config: EventDowntimeConfig): boolean;
             }
 
             interface WorkingHoursConfig {
@@ -33,6 +34,14 @@ declare module '@npmsoluto/moment-business-time' {
               thu: string[] | null;
               fri: string[] | null;
               sat: string[] | null;
+              start: string[] | null;
+              end: string[] | null;
+            }
+
+            interface EventDowntimeConfig {
+                tz: string;
+                start: string[] | null;
+                end: string[] | null;
             }
         }
     export = base_moment;
